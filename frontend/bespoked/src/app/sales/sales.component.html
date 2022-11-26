@@ -1,0 +1,20 @@
+<h1>New Sale</h1>
+<div>
+    <label for="product">Product</label>
+    <select name="product" id="product" [(ngModel)]="newSale.product!.id">
+        <option *ngFor="let product of products" value="{{ product.id }}">{{ product.name }}</option>
+    </select>
+    <label for="salesperson">Salesperson</label>
+    <select name="salesperson" id="salesperson" [(ngModel)]="newSale.salesperson!.id">
+        <option *ngFor="let salesperson of salespeople" value="{{ salesperson.id }}">{{ salesperson.lastName }}, {{ salesperson.firstName }}</option>
+    </select>
+    <label for="customer">Customer</label>
+    <select name="customer" id="customer" [(ngModel)]="newSale.customer!.id">
+        <option *ngFor="let customer of customers" value="{{ customer.id }}">{{ customer.lastName }}, {{ customer.firstName }}</option>
+    </select>
+    <label for="sd">Sales Date</label>
+    <input type="date" name="sd" id="sd" [(ngModel)]="newSale.salesDate"/>
+    <button (click)="createNewSale()">Create New sale</button>
+</div>
+<h1>Sales</h1>
+<app-sale *ngFor="let sale of sales" [sale]="sale"></app-sale>

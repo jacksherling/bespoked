@@ -1,0 +1,14 @@
+<div *ngIf="!editing">
+    <p><b>{{product.name}}</b></p>
+    <p>Manufacturer: {{product.manufacturer}} Style: {{product.style}}</p>
+    <p>Purchase Price: {{product.purchasePrice}} Sale Price: {{product.salePrice}}</p>
+    <p>Quantity on Hand: {{product.qtyOnHand}} Commission Percentage: {{product.commissionPercentage}}</p>
+    <button (click)="switchEditing()">Edit</button>
+</div>
+<div *ngIf="editing">
+    <p><b><input type="text" name="name" id="name" [(ngModel)]="product.name"/></b></p>
+    <p>Manufacturer: <input type="text" name="manufacturer" id="manufacturer" [(ngModel)]="product.manufacturer"/> Style: <input type="text" name="style" id="style" [(ngModel)]="product.style"/></p>
+    <p>Purchase Price <input type="text" name="purchase-price" id="purchase-price" [(ngModel)]="product.purchasePrice"/> Sale Price: <input type="text" name="sale-price" id="sale-price" [(ngModel)]="product.salePrice"/></p>
+    <p>Quantity on Hand: <input type="text" name="qty-on-hand" id="qty-on-hand" [(ngModel)]="product.qtyOnHand"/> Commission Percentage: <input type="text" name="commission-percentage" id="commission-percentage" [(ngModel)]="product.commissionPercentage"/></p>
+    <button (click)="save()">Save</button>
+</div>

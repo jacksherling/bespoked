@@ -1,0 +1,9 @@
+<div>
+    <label for="year">Year</label>
+    <input type="text" name="year" id="year" [(ngModel)]="quarter.year">
+    <label for="year">Quarter</label>
+    <input type="text" name="quarter" id="quarter" [(ngModel)]="quarter.quarter">
+    <button (click)="getData()">Get Report</button>
+</div>
+<h1>Reports for Q{{ quarter.quarter }} {{ quarter.year }}</h1>
+<app-salespersonreport *ngFor="let salespersonReport of reports" [salespersonReport]="salespersonReport"></app-salespersonreport>

@@ -1,0 +1,20 @@
+<h1>New Product</h1>
+<div>
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" [(ngModel)]="newProduct.name"/>
+    <label for="lname">Manufactuerer</label>
+    <input type="text" name="manufacturer" id="manufacturer" [(ngModel)]="newProduct.manufacturer"/>
+    <label for="style">Style</label>
+    <input type="text" name="style" id="style" [(ngModel)]="newProduct.style"/>
+    <label for="purchase-price">Purchase Price</label>
+    <input type="text" name="purchase-price" id="purchase-price" [(ngModel)]="newProduct.purchasePrice"/>
+    <label for="sale-price">Sale Price</label>
+    <input type="text" name="sale-price" id="sale-price" [(ngModel)]="newProduct.salePrice"/>
+    <label for="qty-on-hand">Quantity on Hand</label>
+    <input type="text" name="qty-on-hand" id="qty-on-hand" [(ngModel)]="newProduct.qtyOnHand"/>
+    <label for="commission-percentage">Commission Percentage</label>
+    <input type="text" name="commission-percentage" id="commission-percentage" [(ngModel)]="newProduct.commissionPercentage"/>
+    <button (click)="createNewProduct()">Create New Product</button>
+</div>
+<h1>Product</h1>
+<app-product *ngFor="let product of products" [product]="product" [reload]="getProducts"></app-product>

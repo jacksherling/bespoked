@@ -1,0 +1,14 @@
+<h1>New Customer</h1>
+<div>
+    <label for="fname">First Name</label>
+    <input type="text" name="fname" id="fname" [(ngModel)]="newCustomer.firstName"/>
+    <label for="lname">Last Name</label>
+    <input type="text" name="lname" id="lname" [(ngModel)]="newCustomer.lastName"/>
+    <label for="address">Address</label>
+    <input type="text" name="address" id="address" [(ngModel)]="newCustomer.address"/>
+    <label for="phone">Phone Number</label>
+    <input type="text" name="phone" id="phone" [(ngModel)]="newCustomer.phone"/>
+    <button (click)="createNewCustomer()">Create New customer</button>
+</div>
+<h1>Customers</h1>
+<app-customer *ngFor="let customer of customers" [customer]="customer"></app-customer>

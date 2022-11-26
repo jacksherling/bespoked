@@ -1,0 +1,14 @@
+<div *ngIf="!editing">
+    <p><b>{{salesperson.lastName}}, {{salesperson.firstName}}</b></p>
+    <p>Address: {{salesperson.address}}, Phone Number: {{salesperson.phone}}</p>
+    <p>Start Date: {{salesperson.startDate}} Termination Date: {{salesperson.terminationDate}}</p>
+    <p>Manager: {{salesperson.manager}}</p>
+    <button (click)="switchEditing()">Edit</button>
+</div>
+<div *ngIf="editing">
+    <p><b><input type="text" name="lname" id="lname" [(ngModel)]="salesperson.lastName"/>, <input type="text" name="fname" id="fname" [(ngModel)]="salesperson.firstName"/></b></p>
+    <p>Address: <input type="text" name="address" id="address" [(ngModel)]="salesperson.address"/>, Phone Number: <input type="text" name="phone" id="phone" [(ngModel)]="salesperson.phone"/></p>
+    <p>Start Date: <input type="date" name="sd" id="sd" [(ngModel)]="salesperson.startDate"/> Termination Date: <input type="date" name="td" id="td" [(ngModel)]="salesperson.terminationDate"/></p>
+    <p>Manager: <input type="text" name="manager" id="manager" [(ngModel)]="salesperson.manager"/></p>
+    <button (click)="save()">Save</button>
+</div>

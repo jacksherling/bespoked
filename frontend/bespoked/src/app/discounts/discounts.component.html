@@ -1,0 +1,15 @@
+<h1>New Discount</h1>
+<div>
+    <select name="product" id="product" [(ngModel)]="newDiscount.product!.id">
+        <option *ngFor="let product of products" value="{{ product.id }}">{{ product.name }}</option>
+    </select>
+    <label for="bd">Begin Date</label>
+    <input type="date" name="bd" id="bd" [(ngModel)]="newDiscount.beginDate"/>
+    <label for="ed">End Date</label>
+    <input type="date" name="ed" id="ed" [(ngModel)]="newDiscount.endDate"/>
+    <label for="discount-percentage">Discount Percentage</label>
+    <input type="text" name="discount-percentage" id="discount-percentage" [(ngModel)]="newDiscount.discountPercentage"/>
+    <button (click)="createNewDiscount()">Create New Discount</button>
+</div>
+<h1>Discount</h1>
+<app-discount *ngFor="let discount of discounts" [discount]="discount"></app-discount>
