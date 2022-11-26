@@ -18,7 +18,7 @@ public class Sale {
     }
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
     @OneToOne(targetEntity = Product.class, cascade = CascadeType.MERGE)
     @JoinColumn(name = "product_foreign_key", referencedColumnName = "id")

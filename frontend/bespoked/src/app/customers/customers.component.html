@@ -8,7 +8,9 @@
     <input type="text" name="address" id="address" [(ngModel)]="newCustomer.address"/>
     <label for="phone">Phone Number</label>
     <input type="text" name="phone" id="phone" [(ngModel)]="newCustomer.phone"/>
-    <button (click)="createNewCustomer()">Create New customer</button>
+    <label for="sd">Start Date</label>
+    <input type="date" name="sd" id="sd" [(ngModel)]="newCustomer.startDate"/>
+    <button (click)="createNewCustomer()">Create New Customer</button>
 </div>
 <h1>Customers</h1>
 <app-customer *ngFor="let customer of customers" [customer]="customer"></app-customer>

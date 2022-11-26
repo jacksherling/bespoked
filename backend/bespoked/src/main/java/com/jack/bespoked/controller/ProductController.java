@@ -1,14 +1,10 @@
 package com.jack.bespoked.controller;
 
-import com.jack.bespoked.entity.JoinedSale;
 import com.jack.bespoked.entity.Product;
 import com.jack.bespoked.repository.ProductRepository;
 import com.jack.bespoked.util.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import javax.persistence.TypedQuery;
-import javax.servlet.http.HttpSession;
 
 import java.util.ArrayList;
 import java.util.Iterator;

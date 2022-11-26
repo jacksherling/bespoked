@@ -8,8 +8,6 @@ import java.util.List;
 
 public interface SalespersonRepository extends CrudRepository<Salesperson, Integer> {
 
-//    @Query(value = "SELECT * FROM salesperson s WHERE s.start_date BETWEEN ?1 AND ?2 OR s.termination_date BETWEEN ?1 AND ?2",
-//            nativeQuery = true)
     @Query(value = "SELECT * FROM salesperson s WHERE NOT (s.start_date > ?2 OR s.termination_date <  ?1)",
         nativeQuery = true)
     List<Salesperson> getSalespeopleByQuarter(String date1, String date2);

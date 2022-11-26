@@ -1,4 +1,5 @@
 <div *ngIf="!editing">
+    <hr>
     <p><b>{{product.name}}</b></p>
     <p>Manufacturer: {{product.manufacturer}} Style: {{product.style}}</p>
     <p>Purchase Price: {{product.purchasePrice}} Sale Price: {{product.salePrice}}</p>
@@ -6,6 +7,7 @@
     <button (click)="switchEditing()">Edit</button>
 </div>
 <div *ngIf="editing">
+    <hr>
     <p><b><input type="text" name="name" id="name" [(ngModel)]="product.name"/></b></p>
     <p>Manufacturer: <input type="text" name="manufacturer" id="manufacturer" [(ngModel)]="product.manufacturer"/> Style: <input type="text" name="style" id="style" [(ngModel)]="product.style"/></p>
     <p>Purchase Price <input type="text" name="purchase-price" id="purchase-price" [(ngModel)]="product.purchasePrice"/> Sale Price: <input type="text" name="sale-price" id="sale-price" [(ngModel)]="product.salePrice"/></p>

@@ -5,7 +5,6 @@ import com.jack.bespoked.repository.SaleRepository;
 import com.jack.bespoked.repository.SalespersonRepository;
 import com.jack.bespoked.util.Quarter;
 import com.jack.bespoked.util.QuarterResponse;
-import com.jack.bespoked.util.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,7 +22,7 @@ public class ReportController {
 
     @PostMapping(path="")
     public QuarterResponse getReport(@RequestBody Quarter quarter) {
-        String month1 = formattedMonth((quarter.getQuarter() - 1) * 3);
+        String month1 = formattedMonth((quarter.getQuarter() - 1) * 3 + 1);
         String month2 = formattedMonth(quarter.getQuarter() * 3);
         String date1 = quarter.getYear() + "-" + month1 + "-00";
         String date2 = quarter.getYear() + "-" + month2 + "-32";

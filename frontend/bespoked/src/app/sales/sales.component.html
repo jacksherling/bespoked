@@ -14,7 +14,7 @@
     </select>
     <label for="sd">Sales Date</label>
     <input type="date" name="sd" id="sd" [(ngModel)]="newSale.salesDate"/>
-    <button (click)="createNewSale()">Create New sale</button>
+    <button (click)="createNewSale()">Create New Sale</button>
 </div>
 <h1>Sales</h1>
 <app-sale *ngFor="let sale of sales" [sale]="sale"></app-sale>

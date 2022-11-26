@@ -1,8 +1,6 @@
 package com.jack.bespoked.controller;
 
 import com.jack.bespoked.entity.Customer;
-import com.jack.bespoked.entity.Customer;
-import com.jack.bespoked.repository.CustomerRepository;
 import com.jack.bespoked.repository.CustomerRepository;
 import com.jack.bespoked.util.Response;
 import org.springframework.beans.factory.annotation.Autowired;

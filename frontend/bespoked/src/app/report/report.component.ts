@@ -11,9 +11,6 @@ import { CONSTANTS, Quarter, QuarterResponse } from '../util';
 })
 export class ReportComponent implements OnInit {
 
-  // year: Number = 2022;
-  // quarter: Number = 1;
-
   quarter: Quarter = { quarter: 1, year: 2022 };
 
   salespeople: Salesperson[] = [];

@@ -26,6 +26,7 @@ export interface Customer {
     lastName?: String;
     address?: String;
     phone?: String;
+    startDate?: String;
 }
 
 export interface Sale {

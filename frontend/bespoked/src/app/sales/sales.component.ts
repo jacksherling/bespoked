@@ -46,6 +46,8 @@ export class SalesComponent implements OnInit {
       console.log(response)
       if (response.message == "Success") {
         this.getSales();
+      } else {
+        alert(response.message);
       }
     });
   }

@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { Customer } from '../entities';
-import { CONSTANTS, Response } from '../util';
 
 @Component({
   selector: 'app-customer',

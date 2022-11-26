@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Injectable, Input, OnInit } from '@angular/core';
-import { Salesperson, SalespersonReport } from '../entities';
+import { Salesperson } from '../entities';
 import { CONSTANTS, Response } from '../util';
 
 @Injectable()

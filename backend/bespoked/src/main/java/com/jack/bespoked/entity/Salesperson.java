@@ -23,7 +23,7 @@ public class Salesperson {
     }
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
     private String firstName;
     private String lastName;

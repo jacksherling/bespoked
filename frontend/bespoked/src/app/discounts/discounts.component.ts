@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Discount, Product } from '../entities';
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CONSTANTS, Response } from '../util';
 
