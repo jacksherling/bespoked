@@ -1,4 +1,4 @@
-# Bespoked Application
+# Bespoked Application - Technical Exercise
 
 ## Frontend
 
