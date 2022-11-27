@@ -39,8 +39,6 @@ public class SaleController {
         if (product == null || product.getQtyOnHand() <= 0) {
             return new Response("No product in stock", null);
         }
-        product.setQtyOnHand(product.getQtyOnHand() - 1);
-        productRepository.save(product);
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date saleDate = dateFormat.parse(sale.getSalesDate());
@@ -69,6 +67,10 @@ public class SaleController {
         }
         sale.setPrice(sale.getProduct().getPurchasePrice() * discount);
         Sale newSale = saleRepository.save(sale);
+
+        product.setQtyOnHand(product.getQtyOnHand() - 1);
+        productRepository.save(product);
+
         return new Response("Success", newSale);
     }
 
